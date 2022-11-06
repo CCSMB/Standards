@@ -1,4 +1,4 @@
-# CCSMB-1: Procedures for submitting a standard
+# CCSMB-1: Procedures for Standards Submission
 
 This RFC defines the protocol for defining and submitting a standard to the CCSMB.
 
