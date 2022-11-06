@@ -27,7 +27,7 @@ The RFC should be written in a professional tone. Readers are expected to have a
 
 ## Inclusion of Examples
 
-Each RFC should include code for utilizing the standard. If the RFC is sufficiently complex, a reference implementation should be written and placed in `/Standards/CCSMB-n`, where `n` is the RFC number.
+Each RFC should include code for utilizing the standard. If the RFC is sufficiently complex, a reference implementation should be written and placed in the `/Standards/CCSMB-n` folder, where `n` is the RFC number.
 
 ## Submission
 
