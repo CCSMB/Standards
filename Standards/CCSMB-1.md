@@ -6,7 +6,7 @@ This RFC defines the protocol for defining and submitting a standard to the CCSM
 
 Each RFC should be named `CCSMB-n.md`, where `n` is a number counting upwards.
 
-Each RFC should be a [GitHub-Flavored Markdown](https://github.github.com/gfm/) document with American English spelling.
+Each RFC should be a [GitHub-Flavoured Markdown](https://github.github.com/gfm/) document with British English spelling.
 
 ## Submission
 
