@@ -10,5 +10,5 @@ Each RFC should be a [GitHub-Flavored Markdown](https://github.github.com/gfm/) 
 
 ## Submission
 
-Each submission should be in the form of a GitHub pull request. To be accepted as a standard, said pull request should have three document reviews and should be merged after that threshold has been met.
+Each submission should be in the form of a GitHub pull request. To be accepted as a standard, said pull request should have three approving reviews and should be merged after that threshold has been met.
 
