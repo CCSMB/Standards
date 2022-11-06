@@ -1,5 +1,7 @@
 # CCSMB-1: Procedures for Standards Submission
 
+*Author: Tomodachi94 <@tomodachi94>*
+
 This RFC defines the protocol for defining and submitting a standard to the CCSMB.
 
 ## File Naming and Formatting
@@ -7,6 +9,25 @@ This RFC defines the protocol for defining and submitting a standard to the CCSM
 Each RFC should be named `CCSMB-n.md`, where `n` is a number counting upwards.
 
 Each RFC should be a [GitHub-Flavoured Markdown](https://github.github.com/gfm/) document with British English spelling.
+
+## Header
+
+Each RFC should have the following immediately after the title:
+
+```md
+*Author: Your Name <@yourgithub>*
+*Last updated: YYYY-MM-DD*
+```
+
+To prevent commit spam, the "last updated" field should only be inserted before the PR is merged.
+
+## Tone
+
+The RFC should be written in a professional tone. Readers are expected to have a basic understanding of programming jargon and Lua programming.
+
+## Inclusion of Examples
+
+Each RFC should include code for utilizing the standard. If the RFC is sufficiently complex, a reference implementation should be written and placed in `/Standards/CCSMB-n`, where `n` is the RFC number.
 
 ## Submission
 
