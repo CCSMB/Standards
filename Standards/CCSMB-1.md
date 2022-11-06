@@ -2,7 +2,7 @@
 
 This RFC defines the protocol for defining and submitting a standard to the CCSMB.
 
-## File names and formatting
+## File Naming and Formatting
 
 Each RFC should be named `CCSMB-n.md`, where `n` is a number counting upwards.
 
