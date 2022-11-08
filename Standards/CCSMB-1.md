@@ -16,10 +16,13 @@ Each RFC should have the following immediately after the title:
 
 ```md
 *Author: Your Name <@yourgithub>*
+*Version: v1.0.0
 *Last updated: YYYY-MM-DD*
 ```
 
 To prevent commit spam, the "last updated" field should only be inserted before the PR is merged.
+
+The version field should only be inserted immediately before the PR is merged.
 
 ## Tone
 
