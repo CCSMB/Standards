@@ -32,6 +32,8 @@ The RFC should be written in a professional tone. Readers are expected to have a
 
 Each RFC should include code for utilizing the standard. If the RFC is sufficiently complex, a reference implementation should be written and placed in the `/Standards/CCSMB-n` folder, where `n` is the RFC number.
 
+In the case of a standardized file format, examples should be stored in `/Standards/CCSMB-n`.
+
 ## Submission
 
 Each submission should be in the form of a GitHub pull request. To be accepted as a standard, said pull request should have three approving reviews and should be merged after that threshold has been met.
