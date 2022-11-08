@@ -2,6 +2,10 @@
 
 *Author: Tomodachi94 <@tomodachi94>*
 
+*Version: v1.0.0*
+
+*Last updated: 2022-11-07*
+
 This RFC defines the protocol for defining and submitting a standard to the CCSMB.
 
 ## File Naming and Formatting
