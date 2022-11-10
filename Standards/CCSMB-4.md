@@ -1,7 +1,9 @@
 # CCSMB-4: Lua
 
 *Author: Oliver Cooper (oeed)*
+
 *Last updated: 2022-01-27*
+
 *Version: v1.0.0*
 
 ## Quick information
