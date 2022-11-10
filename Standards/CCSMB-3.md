@@ -1,7 +1,9 @@
 # CCSMB-3: Directory
 
 *Author: Oliver Cooper (oeed)*
+
 *Last updated: 2017-01-27*
+
 *Version: v1.0.0*
 
 ## Quick information
