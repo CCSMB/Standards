@@ -15,7 +15,7 @@
 
 ## Technical details
 
-*This format is based upon [plain text](/File-Formats/text/plain.md) and as such technical details that apply to plain
+*This format is based upon [plain text](/Standards/CCSMB-2.md) and as such technical details that apply to plain
 text also apply to this format.*
 
 Lua code files should contain valid, executable Lua code. These can either be self-contained programs, APIs or Lua
