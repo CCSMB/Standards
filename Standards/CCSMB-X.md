@@ -1,6 +1,8 @@
 # WAV format for DFPWM data
 *Author: JackMacWindows <@MCJack123>*
+
 *Version: v1.0.0*
+
 *Last updated: 2022-05-02*
 
 This document describes how to store DFPWM data in a WAV file.
@@ -25,7 +27,7 @@ The `fmt `&nbsp;chunk follows the standard layout for `WAVE_FORMAT_EXTENDED`, us
 | 0x18   | 16    | DFPWM UUID (`3ac1fa38811d4361a40dce53ca607cd1`) |
 
 ## `fact` chunk
-The `fact` chunk is required when using a non-PCM format. This is simply a 32-bit integer specifying the total number of samples in a single channel. This should be equal to (data length * 8 / channels).
+The `fact` chunk is required when using a non-PCM format. This is simply a 32-bit integer specifying the total number of samples in a single channel. This should be equal to `data length * 8 / channels`.
 
 ## `data` chunk
 The `data` chunk stores the raw DFPWM data. For single channel audio, this is equivalent to existing raw DFPWM files. For multichannel audio, all samples are interleaved in the PCM input to the encoder. This may be implemented by first encoding the native audio representation to interleaved signed (or unsigned, depending on the codec's capabilities) 8-bit PCM, as would be stored in a PCM WAV file, then passed directly to the DFPWM encoder.
