@@ -21,4 +21,4 @@
 text also apply to this format.*
 
 Lua code files should contain valid, executable Lua source code. These can either be self-contained programs, APIs or Lua
-otherwise loaded by a program.
+otherwise loaded by a program. Lua code files should be loaded with `require`, over `os.loadAPI`. Lua code files should also use `local` to declare a variable, unless a `global` is needed, which it usually is not.
