@@ -20,7 +20,9 @@ Each RFC should have the following immediately after the title:
 
 ```md
 *Author: Your Name <@yourgithub>*
+
 *Version: v1.0.0
+
 *Last updated: YYYY-MM-DD*
 ```
 
