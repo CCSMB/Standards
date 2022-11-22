@@ -30,6 +30,10 @@ To prevent commit spam, the "last updated" field should only be inserted before 
 
 The version field should only be inserted immediately before the PR is merged.
 
+## Formatting
+
+Each RFC should be written in GitHub-flavoured Markdown and should follow the [Semantic Linebreaks (SemBr)](https://sembr.org) specification.
+
 ## Tone
 
 The RFC should be written in a professional tone. Readers are expected to have a basic understanding of programming jargon and Lua programming.
