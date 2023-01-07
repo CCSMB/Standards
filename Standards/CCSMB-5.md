@@ -11,9 +11,10 @@ The server will communicate to the client over modem
 
 ## Packet
 A packet consists of the following fields in a table:
-- buffer: Signed 8-bit PCM @ 48kHz
-- stationName: The name of the radio station
-- title: The song that is currently being played
+- buffer: A table that contains Signed 8-bit PCM @ 48kHz audio
+- station: A string that contains the name of the radio station
+- title: A string that contains the song that is currently being played
+- protocol: A string that contains the protocol used (for example "CCSMB-5")
 
 A client must be able to accept the buffer field in order to be compliant
 A server must be able to transmit all of the fields in order to be compliant
