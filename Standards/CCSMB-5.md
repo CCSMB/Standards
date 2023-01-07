@@ -1,9 +1,7 @@
 # CCSMB-5: Radio Transmissions
-```md
 *Author: Emma Beurskens <@emmaknijn>*
 *Version: v1.0.0*
 *Last updated: YYYY-MM-DD*
-```
 
 ## Design
 A client will only listen to packets while the audio is being transmitted from a server
