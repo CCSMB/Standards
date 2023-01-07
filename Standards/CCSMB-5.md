@@ -14,8 +14,9 @@ A packet consists of the following fields in a table:
 - buffer: A table that contains Signed 8-bit PCM @ 48kHz audio
 - station: A string that contains the name of the radio station
 - title: A string that contains the song that is currently being played
-- protocol: A string that contains the protocol used (for example "CCSMB-5")
+- protocol: A string that contains the protocol used
 
+The protocol field must be "CCSMB-5" in order to be compliant
 A client must be able to accept the buffer field in order to be compliant
 A server must be able to transmit all of the fields in order to be compliant
 A server must time the packets appropriately in a way that the client is just able to play back the buffer in order to be compliant
