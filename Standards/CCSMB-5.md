@@ -12,7 +12,6 @@ The server will communicate to the client over modem
 ## Packet
 A packet consists of the following fields in a table:
 - buffer: Signed 8-bit PCM @ 48kHz
-- id: A random number that identifies the radio station
 - stationName: The name of the radio station
 - title: The song that is currently being played
 
