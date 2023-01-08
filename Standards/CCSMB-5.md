@@ -6,7 +6,7 @@
 ## Design
 A client will only listen to packets while the audio is being transmitted from a server
 The server will communicate to the client over modem
-
+It is recommended that servers use channels 2048-4096
 
 ## Packet
 A packet consists of the following fields in a table:
