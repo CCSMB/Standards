@@ -1,5 +1,5 @@
 # CCSMB 4: Recommendations for Lua Code
-
+| | |
 |-:|:-|
 | **Author** | JackMacWindows |
 | **Version** | v1.0.0 |
@@ -104,8 +104,11 @@ print(foo())
 **2.1.2.** Variables that are not used for temporary values or iterator storage SHOULD have full names with proper words or combinations of words in the writer's chosen language. These names SHOULD indicate what the variable is meant to store, and potentially the type of the variable (as in Hungarian notation).
 
 ## 2.2. Library Style
+**2.2.1.** Libraries SHOULD return a single table at the end of the file. Returning a single function is acceptable, but not recommended for consistency sake.
 
+**2.2.2.** Libraries SHOULD define the returned table at the beginning, filling in the table throughout the file.
 
+**2.2.3.** Libraries SHOULD NOT make local variables for functions that will be in the returned table. Functions SHOULD be defined directly in the table, like `function library.foo()`.
 
 ## 2.3. Program Style
 **2.3.1.** Programs SHOULD NOT use any global/environment variables in their code for any reason. 
