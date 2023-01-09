@@ -13,7 +13,7 @@
 | Version     | 1.0.9                        |
 | Author      | walksanator (Walker Fowlkes) |
 | Type        | Virtual File System Archiv   |
-| MIME        | `text/plain`                 |
+| MIME        | `appilcation/vfs`            |
 | Extensions  | `.vfs`                       |
 
 ## Technical details
