@@ -21,7 +21,7 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 # 1. Interface Guidelines
 
 ## 1.1. File Format
-**1.1.1.** Lua files MUST be plain-text files as specified in CCSMB 2. This means only UTF-8 text is accepted, and Lua files MUST be opened in text mode (`"r"`/`"w"`).
+**1.1.1.** Lua files MUST be plain-text files as specified in [CCSMB 2](https://ccsmb.github.io/standards/ccsmb-2). This means only UTF-8 text is accepted, and Lua files MUST be opened in text mode (`"r"`/`"w"`).
 
 **1.1.2.** Lua files SHOULD have the extension `.lua`, but older programs MAY accept no extension as well.
 
@@ -45,7 +45,9 @@ For GPL-family licenses, the CCSMB RECOMMENDS that libraries use LGPL over GPL, 
 
 **1.2.4.** Libraries MUST be loadable by the `require` function, and SHOULD be loadable by the `dofile` function if the library doesn't use `require` to load dependencies.
 
-**1.2.5.** Libraries MUST NOT be compatible with `os.loadAPI`, and SHOULD NOT use `os.loadAPI` to load dependencies. Libraries which use dependencies that originally require `os.loadAPI` SHOULD import modified versions of those dependencies where possible. If an `os.loadAPI` dependency cannot be converted, libraries MUST NOT overwrite any previous global with the API's name after exiting the library code. The following code demonstrates how to safely use `os.loadAPI` in a library compliant with this specification:
+**1.2.5.** Libraries MUST NOT be compatible with `os.loadAPI`, and SHOULD NOT use `os.loadAPI` to load dependencies. Libraries which use dependencies that originally require `os.loadAPI` SHOULD import modified versions of those dependencies where possible. If an `os.loadAPI` dependency cannot be converted, libraries MUST NOT overwrite any previous global with the API's name after exiting the library code.
+
+The following code demonstrates how to safely use `os.loadAPI` in a library compliant with this specification:
 
 ```lua
 local foo                  -- forward declaration
@@ -67,7 +69,11 @@ end
 # 2. Style Guidelines
 
 ## 2.1. General Code Style
-**2.1.1.** All code SHOULD have proper indentation on every line of code. This means adding a certain number of indentations (which MAY be a set number of spaces or a single tab character) before the start of text on each line. The start of the file has an indentation level of 0. For every keyword in (`do`, `else`, `function`, `repeat`, `then`, `{`), the indentation level *for the following lines* is increased by 1. For every keyword in (`else`, `elseif`, `end`, `until`, `}`), the indentation level *for that line and all following lines* is decreased by 1. Multi-line strings are exempt from this rule, and no indentation is required while inside a multi-line string. The following code follows this rule:
+**2.1.1.** All code SHOULD have proper indentation on every line of code. This means adding a certain number of indentations (which MAY be a set number of spaces or a single tab character) before the start of text on each line.
+
+The start of the file has an indentation level of 0. For every keyword in (`do`, `else`, `function`, `repeat`, `then`, `{`), the indentation level *for the following lines* is increased by 1. For every keyword in (`else`, `elseif`, `end`, `until`, `}`), the indentation level *for that line and all following lines* is decreased by 1. Multi-line strings are exempt from this rule, and no indentation is required while inside a multi-line string.
+
+The following code follows this rule:
 
 ```lua
 local firstLine = "hello"
@@ -111,4 +117,6 @@ print(foo())
 **2.2.3.** Libraries SHOULD NOT make local variables for functions that will be in the returned table. Functions SHOULD be defined directly in the table, like `function library.foo()`.
 
 ## 2.3. Program Style
-**2.3.1.** Programs SHOULD NOT use any global/environment variables in their code for any reason. 
+**2.3.1.** Programs SHOULD NOT use any global/environment variables in their code for any reason.
+
+**2.3.2.** Programs that can take command-line arguments SHOULD have a usage prompt when invalid arguments are passed.
