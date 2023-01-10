@@ -1,6 +1,9 @@
-# bimg File Format Specification
+# CCSMB-3 bimg File Format
+
 *Author: SkyTheCodeMaster*
+
 *Version: 1.0.0*
+
 *Last Revised: 2022-07-29*
 
 bimg (abbreviation of "blit image") is a versatile image format for the ComputerCraft Minecraft mod.
