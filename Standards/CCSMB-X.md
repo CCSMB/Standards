@@ -1,4 +1,4 @@
-# CCSMB-X: Virtual File System
+# CCSMB-X: Virtual File System Archive
 
 *Author: walksanator (Walker Fowlkes)*
 
@@ -18,7 +18,8 @@
 
 ## Technical details
 
-the VFS file is a text-based format that represents folder(s) as a lua table
-where each file/directories name is the key of the table, and the content is the value
-for files the value is the contents of the file
-for directories the value is a table containg more files/directories
+The VFS file format is a text-based format that represents folder(s) as a lua table
+where the keys of the table are used as file names and values are used for conents.
+directories in VFS are tables, whereas files have their contents embedded as a string
+VFS files should be read and written in binary mode as to prevent converting charachters to `?`
+One drawback of VFS is that it doesen't preserve 
