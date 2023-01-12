@@ -24,7 +24,39 @@ Directories in VFS are tables, whereas files have their contents embedded as str
 VFS files should be read and written in binary mode as to prevent converting binary characters to `?`.
 VFS archives do not store metadata, programs that need things like modification times will need to seek a alternative.
 
-## Examples included
+## Examples
 
-In the CCSMB-X folder there is a [example tool](./CCSMB-X/vfstool.lua) for creating and extracting archive
-and a [example archive](./CCSMB-X/Example1.vfs) containg a _G dumper script in a folder named "empty" and it's output
+A example function that takes a directory and turns it into a VFS could be implemented as.
+```lua
+local function gen_disk(path) --takes a path to turn into a table
+    local pth = fs.getName(path) --get the file name
+    local tree = {} --create a empty tree
+    for _,v in pairs(fs.list(path)) do --itterate
+        if fs.isDir(path.."/"..v) then --if it is a dir
+            tree[v] = gen_disk(path.."/"..v) --call this function on that directory
+        else-- it is a file
+            local chandle = fs.open(path.."/"..v,'rb') --read all contents and add to the VFS
+            tree[v] = chandle.readAll()
+            chandle.close()
+        end
+    end
+    return tree --return the current VFS
+end
+```
+
+Another example function that takes a root to extract to and VFS to extract from.
+```lua
+function unpack_vfs(path,files)
+    fs.makeDir(path) --create the directory that files will live in
+    shell.setDir(path) -- head into the new directory
+    for k, v in pairs(files) do --itterate over directory contents in VFS
+        if type(v) == "table" then
+            unpack_vfs(path.."/"..k,v) --extract folder
+        elseif type(v) == "string" then
+            local fh = fs.open(fs.combine(rpath,fs.combine(path,k)),'wb') --extract file
+            fh.write(v)
+            fh.close()
+        end
+    end
+end
+```
