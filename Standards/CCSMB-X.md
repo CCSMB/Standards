@@ -18,11 +18,11 @@
 
 ## Technical details
 
-The VFS file format is a text-based format that represents folder(s) as a lua table
-where the keys of the table are used as file names and values are used for conents.
-Directories in VFS are tables, whereas files have their contents embedded as a string.
-VFS files should be read and written in binary mode as to prevent converting binary charachters to `?`
-One drawback of the VFS format is that it does not save any MetaData of files compressed
+The VFS file format is a text-based format that represents folder(s) as a Lua table
+where the keys of the table are used as file names and values are used for contents.
+Directories in VFS are tables, whereas files have their contents embedded as strings.
+VFS files should be read and written in binary mode as to prevent converting binary characters to `?`.
+VFS archives do not store metadata, programs that need things like modification times will need to seek a alternative.
 
 ## Examples included
 
