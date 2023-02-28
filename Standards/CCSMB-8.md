@@ -1,9 +1,9 @@
-# WAV format for DFPWM data
+# *CCSMB 8:* WAV format for DFPWM data
 *Author: JackMacWindows <@MCJack123>*
 
 *Version: v1.0.0*
 
-*Last updated: 2022-05-02*
+*Last updated: 2023-02-27*
 
 This document describes how to store DFPWM data in a WAV file.
 
@@ -36,5 +36,6 @@ All data uses a single encoder instance with `q` and `s` set to 0, and `lt` set 
 
 ## Compliant muxers/demuxers
 The following muxers are known to support DFPWM data in WAV files:
+- [CC: Tweaked `speaker` program](https://github.com/cc-tweaked/CC-Tweaked/blob/mc-1.19.x/projects/core/src/main/resources/data/computercraft/lua/rom/programs/fun/speaker.lua) (since 1.100.9)
 - [AUKit](https://github.com/MCJack123/AUKit)
 - [FFmpeg libavformat/libavcodec](https://ffmpeg.org) (since FFmpeg 5.1/avcodec 59.22/avformat 59.18)
