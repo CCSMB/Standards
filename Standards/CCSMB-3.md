@@ -15,7 +15,7 @@ This specification aims to provide a standardized image format that can be easil
 The examples shown throughout this specification are based on a sample image file, serialized using `textutils.serialize`.
 
 An image file can be separated into two sections: metadata and frame data. These two sections are unordered, meaning that they can be correctly written and read by parsers regardless of whether the metadata or the frame data comes first:
-![Format overview](images/file-structure.png?raw=true)
+![Format overview](media/CCSMB-3/file-structure.png?raw=true)
 
 Metadata contains information about the image itself, while the remaining of the file contains one or more frames, representing the images.
 
@@ -50,7 +50,7 @@ Additionally, an optional per-frame palette can be provided to alter the colors 
 
 When the image is an animation, an optional `duration` field can also be provided. This field overrides the `secondsPerFrame` field set in the metadata, and therefore sets a specific duration (in seconds) for that frame only.
 
-![Frame Data](images/frame-structure.png)
+![Frame Data](media/CCSMB-3/frame-structure.png)
 
 Each line is composed of three `string` values forming a blit table, that can be unpacked directly to `term.blit` when rendering the image.
 
