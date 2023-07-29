@@ -2,6 +2,8 @@
 
 *Author: SkyTheCodeMaster*
 
+*Contributers: MasonGulu, spr2-dev*
+
 *Version: 1.0.0*
 
 *Last Revised: 2022-07-29*
