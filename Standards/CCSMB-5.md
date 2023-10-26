@@ -5,8 +5,12 @@
 
 ## Design
 A client will only listen to packets while the audio is being transmitted from a server
+
 The server will communicate to the client over modem
+
 All servers must be on seperate channels
+
+The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED",  "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
 
 ## Packet
 An audio packet consists of the following fields in a table:
