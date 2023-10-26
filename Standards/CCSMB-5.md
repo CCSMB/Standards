@@ -10,6 +10,8 @@ The server will communicate to the client over modem
 
 All servers must be on seperate channels
 
+PASC refers to "Protocol for Audio Streaming in Computercraft"
+
 The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "SHOULD NOT", "RECOMMENDED",  "MAY", and "OPTIONAL" in this document are to be interpreted as described in RFC 2119.
 
 ## Packet
@@ -28,7 +30,7 @@ The metadata can contain the following fields:
 
 
 In order to be compliant the
-- protocol field must be "CCSMB-5"
+- protocol field must be "PASC"
 - client must be able to deal with crosstalk by allowing the user to select a station if there are multiple stations on a single channel
 - client must reject a packet with an invalid `protocol` field
 - server must time the packets appropriately in a way that the client is just able to play back the buffer
@@ -45,5 +47,5 @@ The following fields are required only for servers responding to a discovery pac
 - `protocol`: A string that contains the protocol used
 
 In order to be compliant the
-- protocol field must be "CCSMB-5"
+- protocol field must be "PASC"
 - client must set the `type` field to `discovery` if they intend to request servers
