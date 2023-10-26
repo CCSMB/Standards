@@ -43,7 +43,7 @@ A discovery packet is sent over channel 759 and must contain the following field
 The following fields are required only for servers responding to a discovery packet
 - `channel`: An integer that contains the modem channel of the radio station
 - `station`: A string that contains the name of the radio station
-- `metadata`: The metadata that is also sent with an audio packet
+- `metadata`: The same metadata that is also sent with an audio packet
 - `protocol`: A string that contains the protocol used
 
 In order to be compliant the
