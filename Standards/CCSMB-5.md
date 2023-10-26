@@ -34,7 +34,7 @@ In order to be compliant the
 - client must be able to deal with crosstalk by allowing the user to select a station if there are multiple stations on a single channel
 - client must reject a packet with an invalid `protocol` field
 - server must time the packets appropriately in a way that the client is just able to play back the buffer
-- server must wait exactly as long as the piece of audio being sent when timing the packets, if this doesn't happen the audio might skip or stutter on the client
+- server must wait exactly as long as the piece of audio being sent when timing the packets, if this doesn't happen the audio might skip or stutter on the client. The recommended amount for a single packet is about 2.5 seconds
 
 ## Discovery
 A discovery packet is sent over channel 759 and must contain the following fields in a table:
