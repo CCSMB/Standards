@@ -1,4 +1,4 @@
-# CCSMB-5: Radio Transmissions
+# CCSMB-5: PCM Audio Transmissions over modem
 *Author: Emma Beurskens <@emmaknijn>*
 *Version: v1.0.0*
 *Last updated: YYYY-MM-DD*
