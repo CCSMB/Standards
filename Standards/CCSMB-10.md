@@ -5,6 +5,7 @@
 *Last updated: YYYY-MM-DD*  
 
 ## `settings` API settings
+
 Compliant installers MUST install programs into the directory specified through the `path.programs` setting and MUST install libraries into the directory specified through the `path.libraries` setting.  
 Compliant programs MUST store user data into the directory specified through the `path.data` setting.
 
