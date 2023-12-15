@@ -10,3 +10,5 @@ Compliant installers MUST install programs into the directory specified through 
 Compliant programs MUST store user data into the directory specified through the `path.data` setting.
 
 If the program, library or user data is multiple files, the files MUST be put in a subdirectory.
+
+The settings paths MUST start with a / and MUST NOT end with a /
