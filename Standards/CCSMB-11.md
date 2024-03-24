@@ -80,6 +80,8 @@ If this setting is not set, compliant software MAY search in the following direc
 
 If none of the directories listed above exist, compliant software MAY create a directory of its choice, provided it sets this setting and `ccsmb_desktop.install_target` (defined below).
 
+If none of the directories listed aboove exist, application launchers MAY choose to abort launching themselves or to remain open and empty.
+
 ### `ccsmb_desktop.install_target`
 
 This setting MUST be a string containing a path to a directory. The directory MUST be created. Compliant software management tooling MUST install applications in this directory.
