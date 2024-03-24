@@ -1,7 +1,10 @@
 return {
 	Name = "My Game With Noncompliant Windowing";
 	Type = "Application";
-	Icon = "/MyPartiallyCompliantOS/MyIcon.nfp";
+	Icon = {
+		["16x16"] = "/MyPartiallyCompliantOS/MyIcon16x16.nfp";
+		["32x32"] = "/MyPartiallyCompliantOS/MyIcon32x32.nfp";
+	};
 	Exec = "/MyPartiallyCompliantOS/myfungame";
 	Terminal = false;
 	CompliantWindowManagement = false;
