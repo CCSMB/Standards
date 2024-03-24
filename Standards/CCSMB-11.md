@@ -67,11 +67,11 @@ Compliant software MUST search all directories (in the order listed). Compliant 
 If this setting is not set, compliant software MAY search in the following directories in the order listed:
 1. `/Application Specifications`
 2. `/AppSpecs`
-3. `/Applications`
-4. `/etc/applications`
-5. `/etc/ccsmb/applications`
-6. `/usr/share/applications`
-7. `/usr/share/ccsmb/applications`
+3. `/etc/ccsmb/applications`
+4. `/usr/share/ccsmb/applications`
+5. `/Applications`
+6. `/etc/applications`
+7. `/usr/share/applications`
 8. `/Library/Application Specifications`
 
 If none of the directories listed above exist, compliant software MAY create a directory of its choice, provided it sets this setting and `ccsmb_desktop.install_target` (defined below).
@@ -83,11 +83,11 @@ This setting MUST be a string containing a path to a directory. The directory MU
 If the setting is not specified, software management tooling MUST search for all of the following directories and place specifications into them if the first match exists:
 1. `/Application Specifications`
 2. `/AppSpecs`
-3. `/Applications`
-4. `/etc/applications`
-5. `/etc/ccsmb/applications`
-6. `/usr/share/applications`
-7. `/usr/share/ccsmb/applications`
+3. `/etc/ccsmb/applications`
+4. `/usr/share/ccsmb/applications`
+5. `/Applications`
+6. `/etc/applications`
+7. `/usr/share/applications`
 8. `/Library/Application Specifications`
  
 Software management tooling MAY create a directory of its choosing from the above list if none exist. If software management tooling chooses to do this, the `ccsmb_desktop.install_target` and `ccsmb_desktop.search_targets` settings MUST be set by the tooling.
