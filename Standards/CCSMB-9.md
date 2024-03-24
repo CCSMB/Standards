@@ -1,4 +1,5 @@
 # CCSMB 9: Disabling Automatic Updating and Dependency Installation in Lua Programs
+
 *Author: Tomodachi94 <@tomodachi94>*
 
 ## Rationale
@@ -13,13 +14,13 @@ Programs which are specifically designed to update programs, namely installers a
 Programs implementing an autoupdater MUST implement all options listed below in order to be considered compliant.
 
 ### `settings` API setting
-Compliant programs MUST allow disabling autoupdating through the `autoupdating.disableAutoupdating` setting. If the option is set to `true`, autoupdating must be disabled.
+Compliant programs MUST allow disabling autoupdating through the `ccsmb.autoupdate.enable` setting. If the option is set to `false`, autoupdating MUST be disabled. If the option is unset, compliant programs MAY choose to enable or disable autoupdating for itself.
 
 Programs running on operating systems which remove the `settings` API MAY be considered compliant if they choose not to implement the `autoupdating.disableAutoupdating` setting.
 
 ### Global variable
 
-Compliant programs MUST allow disabling autoupdating through the `DISABLE_AUTOUPDATING` global variable. If the global is set to `true`, autoupdating must be disabled.
+Compliant programs MUST allow disabling autoupdating through the `CCSMB_DISABLE_AUTOUPDATING` global variable. If the global is set to `true`, autoupdating MUST be disabled. If the variable is unset, compliant programs MAY choose to enable or disable autoupdating for itself.
 
 ## Dependency installation specification
 Programs implementing autoinstallation of dependencies MAY support the following options for disabling that function.
@@ -29,10 +30,10 @@ Programs which are specifically designed to install dependencies, namely install
 Programs implementing autoinstallation of dependencies MUST implement all options listed below in order to be considered compliant.
 
 ### `settings` API setting
-Compliant programs MUST allow disabling autoupdating through the `dependencies.disableAutomaticDependencyInstallation` setting. If the option is set to `true`, autoinstallation of dependencies must be disabled.
+Compliant programs MUST allow disabling dependency installation through the `ccsmb.dependencyInstallation.enable` setting. If the option is set to `true`, autoinstallation of dependencies MUST be disabled. If the option is unset, compliant programs MAY choose to enable or disable dependency installation for itself.
 
 Programs running on operating systems which remove the `settings` API MAY be considered compliant if they choose not to implement the `autoupdating.disableAutoupdating` setting.
 
 ### Global variable
 
-Compliant programs MUST allow disabling autoinstallation of dependencies through the `DISABLE_DEPENDENCY_INSTALLATION` global variable. If the global is set to `true`, autoupdating must be disabled.
+Compliant programs MUST allow disabling autoinstallation of dependencies through the `CCSMB_DISABLE_DEPENDENCY_INSTALLATION` global variable. If the global is set to `true`, autoupdating MUST be disabled. If the option is unset, compliant programs MAY choose to enable or disable dependency installation for itself.
