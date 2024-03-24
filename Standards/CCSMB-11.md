@@ -16,7 +16,7 @@ The purpose of this specification is to standardize behavior for installing, dis
 
 ## Application specifications
 
-Central to the specification are "application specifications". Each application specification MUST be a Lua file with valid syntax. Each specification MUST return a table. The table specified in each application specification MUST contain the following fields:
+Central to the specification are "application specifications". Each application specification MUST be a Lua file with valid syntax. Each application specification SHOULD NOT call functions in their source. Each specification MUST return a table. The table specified in each application specification MUST contain the following fields:
 
 | Field             | Type                | Description                                                                                                                       |
 |---------------------------|---------------------|--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
