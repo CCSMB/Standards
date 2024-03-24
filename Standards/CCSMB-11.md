@@ -39,13 +39,12 @@ Compliant application specifications MAY define the following additional fields:
 
 ### `Icons` array
 
-| Field  | Type                              | Description                                    |
-|--------|-----------------------------------|------------------------------------------------|
-| Type   | str (either "Vector" or "Bitmap") | The type of the icon, either bitmap or vector. |
-| Format | str (e.g. "BIMG" or "NFP")        | The format of the icon.                        |
-| Width  | number                            | The width of the icon, in pixels.              |
-| Height | number                            | The height of the icon, in pixels.             |
-| Path   | str                               | The full path to the image file.               |
+| Field  | Type                                    | Description                                                                                                                                                                                                                                                    |
+|--------|-----------------------------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Format | str (e.g. `image/paint` or `image/nft`) | The MIME type of the format of the icon, as [assigned by the IANA](https://www.iana.org/assignments/media-types/media-types.xhtml) or CCSMB. Software SHOULD ignore icon arrays that have an unrecognized MIME type. Software MAY accept unassigned MIME types. |
+| Width  | number                                  | The width of the icon, in pixels.                                                                                                                                                                                                                              |
+| Height | number                                  | The height of the icon, in pixels.                                                                                                                                                                                                                             |
+| Path   | str                                     | The full path to the image file.                                                                                                                                                                                                                               |
 
 ## Global variables
 
