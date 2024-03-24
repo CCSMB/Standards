@@ -64,21 +64,23 @@ This setting MUST be an array of absolute directories. Each directory SHOULD con
 
 Compliant software MUST search all directories (in the order listed). Compliant software MUST NOT assume the filenames in each directory are the same as the application names; however, software management tooling SHOULD install application specifications with a sensible filename. Application specifications SHOULD use the extension `.desktop`; `.lua` SHOULD also be allowed, but software management tooling SHOULD avoid installing specifications with this extension, to avoid confusion with actual programs.
 
-If this setting is not set, compliant software MAY search for the following directories in the order listed:
+If this setting is not set, compliant software MAY search in the following directories in the order listed:
 1. `/Application Specifications`
 2. `/AppSpecs`
 3. `/Applications`
 4. `/etc/applications`
 5. `/etc/ccsmb/applications`
 6. `/usr/share/applications`
-6. `/usr/share/ccsmb/applications`
-7. `/Library/Application Specifications`
+7. `/usr/share/ccsmb/applications`
+8. `/Library/Application Specifications`
+
+If none of the directories listed above exist, compliant software MAY create a directory of its choice, provided it sets this setting and `ccsmb_desktop.install_target` (defined below).
 
 ### `ccsmb_desktop.install_target`
 
 This setting MUST be a string containing a path to a directory. The directory MUST be created. Compliant software management tooling MUST install applications in this directory.
 
-If the setting is not specified, software management tooling MUST search for all of the following directories and place specifications into them if they exist:
+If the setting is not specified, software management tooling MUST search for all of the following directories and place specifications into them if the first match exists:
 1. `/Application Specifications`
 2. `/AppSpecs`
 3. `/Applications`
@@ -88,4 +90,4 @@ If the setting is not specified, software management tooling MUST search for all
 7. `/usr/share/ccsmb/applications`
 8. `/Library/Application Specifications`
  
-Software management tooling MAY create a directory of its choosing from the above list if none exist. If software management tooling chooses to do this, the `ccsmb_desktop.install_target` setting MUST be set by the tooling.
+Software management tooling MAY create a directory of its choosing from the above list if none exist. If software management tooling chooses to do this, the `ccsmb_desktop.install_target` and `ccsmb_desktop.search_targets` settings MUST be set by the tooling.
