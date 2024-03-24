@@ -28,14 +28,23 @@ Central to the specification are "application specifications". Each application 
 
 Compliant application specifications MAY define the following additional fields:
 
-| Field       | Type                        | Description                                                                                                                                                                                                             |
-|-------------|-----------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Icons       | str-indexed array of str    | An array, where the keys are sizes in pixels (16x16 and 32x32 are common) and the values are paths to a square image representing the application. The file MAY be a BIMG file; other formats are permitted but discouraged. Software management tooling SHOULD install the icon(s) with an appropriate file extension. |
-| GenericName | str                         | The "generic name" of the application. For example, for a file browser, this should be "File Browser".                                                                                                                                                                                                                  |
-| Categories  | number-indexed array of str | Categories in which the application should be shown in application launchers. For a list of valid values, see the [FreeDesktop Desktop Menu specification](https://www.freedesktop.org/wiki/Specifications/menu-spec/).                                                                                           |
-| Keywords    | number-indexed array of str | Keywords which, when combined with Name and GenericName, are useful for searching valid applications.                                                                                                                                                                                                                   |
-| ShowIn      | number-indexed array of str | A list of target software that the application specification should be listed in. Compliant target software SHOULD ignore the specification if this field is set and the target software is not listed here.                                                                                                            |
-| Extra       | str-indexed array of str    | An array containing extra fields not specified in this document. Software SHOULD ignore this field's values if it does not recognize them.                    |
+| Field       | Type                                      | Description                                                                                                                                                                                                             |
+|-------------|-------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| Icons       | number-indexed array of array with fields | An array representing a set of icons for an application. Please see the below section for the format of this array.                                                                                                     |
+| GenericName | str                                       | The "generic name" of the application. For example, for a file browser, this should be "File Browser".                                                                                                                  |
+| Categories  | number-indexed array of str               | Categories in which the application should be shown in application launchers. For a list of valid values, see the [FreeDesktop Desktop Menu specification](https://www.freedesktop.org/wiki/Specifications/menu-spec/). |
+| Keywords    | number-indexed array of str               | Keywords which, when combined with Name and GenericName, are useful for searching valid applications.                                                                                                                   |
+| ShowIn      | number-indexed array of str               | A list of target software that the application specification should be listed in. Compliant target software SHOULD ignore the specification if this field is set and the target software is not listed here.            |
+| Extra       | str-indexed array of str                  | An array containing extra fields not specified in this document. Software SHOULD ignore this field's values if it does not recognize them.                                                                              |
+
+### `Icons` array
+
+| Field  | Type                              | Description                                    |
+|--------|-----------------------------------|------------------------------------------------|
+| Type   | str (either "Vector" or "Bitmap") | The type of the icon, either bitmap or vector. |
+| Width  | number (must be same as Height)   | The width of the icon, in pixels.              |
+| Height | number (must be same as Width)    | The height of the icon, in pixels.             |
+| Path   | str                               | The full path to the image file.               |
 
 ## Global variables
 
