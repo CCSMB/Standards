@@ -1,0 +1,2 @@
+# Syntax highlighting for .desktop files uses XDG syntax, not CCSMB syntax
+Standards/CCSMB-11/*.desktop linguist-language=Lua

@@ -1,0 +1,10 @@
+return {
+	Name = "My Game With Noncompliant Windowing";
+	Type = "Application";
+	Icon = "/MyPartiallyCompliantOS/MyIcon.nfp";
+	Exec = "/MyPartiallyCompliantOS/myfungame";
+	Terminal = false;
+	CompliantWindowManagement = false;
+	ShowIn = { "/MyPartiallyCompliantOS/start" };
+	Categories = { "Game", "Amusement" };
+}
