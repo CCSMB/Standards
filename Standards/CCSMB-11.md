@@ -70,7 +70,7 @@ The `ccsmb_desktop` module MUST NOT contain any functions not specified above.
 
 This section defines variables that SHOULD be defined through the `settings` API ("settings").
 
-### `ccsmb_desktop.search_targets`
+### `ccsmb.desktop.search_targets`
 
 This setting MUST be an array of absolute directories. Each directory SHOULD contain valid application specifications.
 
@@ -86,11 +86,11 @@ If this setting is not set, compliant software MAY search in the following direc
 7. `/usr/share/applications`
 8. `/Library/Application Specifications`
 
-If none of the directories listed above exist, compliant software MAY create a directory of its choice, provided it sets this setting and `ccsmb_desktop.install_target` (defined below).
+If none of the directories listed above exist, compliant software MAY create a directory of its choice, provided it sets this setting and `ccsmb.desktop.install_target` (defined below).
 
 If none of the directories listed aboove exist, application launchers MAY choose to abort launching themselves or to remain open and empty.
 
-### `ccsmb_desktop.install_target`
+### `ccsmb.desktop.install_target`
 
 This setting MUST be a string containing a path to a directory. The directory MUST be created. Compliant software management tooling MUST install applications in this directory.
 
@@ -104,4 +104,4 @@ If the setting is not specified, software management tooling MUST search for all
 7. `/usr/share/applications`
 8. `/Library/Application Specifications`
  
-Software management tooling MAY create a directory of its choosing from the above list if none exist. If software management tooling chooses to do this, the `ccsmb_desktop.install_target` and `ccsmb_desktop.search_targets` settings MUST be set by the tooling.
+Software management tooling MAY create a directory of its choosing from the above list if none exist. If software management tooling chooses to do this, the `ccsmb.desktop.install_target` and `ccsmb.desktop.search_targets` settings MUST be set by the tooling.
