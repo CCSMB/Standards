@@ -6,6 +6,8 @@
 
 *Last revised:*
 
+The words MUST, MUST NOT, SHOULD, SHOULD NOT, and MAY are defined in [RFC 2119](https://www.rfc-editor.org/rfc/rfc2119).
+
 ## Rationale
 
 Currently, most ComputerCraft graphical operating systems, windowing and desktop management systems, and application launchers (collectively "target software") define their own method of discovering and launching applications. The behavior and expectations for each piece of target software vary wildly; for example, some target software expects programs to manage their own windowing through system-specific APIs, while other target software manages it entirely for all programs. Additionally, installation scripts and package managers ("software management tooling") contains wildly inconsistent behavior, varying from not defining any sort of application discovery, containing support for one or two specific target softwares, or attempting to maintain support for *all* target software.
