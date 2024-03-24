@@ -1,0 +1,9 @@
+return {
+	Name = "pain";
+	Type = "Application";
+	Exec = "pain -n";
+	Terminal = true;
+	CompliantWindowManagement = true;
+	GenericName = "Image Editor";
+	Categories = { "Graphics", "RasterGraphics", "ImageProcessing" };
+}

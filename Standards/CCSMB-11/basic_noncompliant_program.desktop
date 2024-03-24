@@ -1,0 +1,14 @@
+return {
+	Name = "My Game With Noncompliant Windowing";
+	Type = "Application";
+	Icons = {
+		{ Format = "image/paint"; Width = 16; Height = 16; Path = "/MyPartiallyCompliantOS/MyIcon16x16" };
+		{ Format = "image/paint"; Width = 32; Height = 32; Path = "/MyPartiallyCompliantOS/MyIcon32x32" };
+		{ Format = "image/paint"; Width = 60; Height = 32; Path = "/MyPartiallyCompliantOS/MyWordmark" };
+	};
+	Exec = "/MyPartiallyCompliantOS/myfungame";
+	Terminal = false;
+	CompliantWindowManagement = false;
+	ShowIn = { "/MyPartiallyCompliantOS/start" };
+	Categories = { "Game", "Amusement" };
+}
