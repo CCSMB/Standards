@@ -1,7 +1,7 @@
 return {
 	Name = "My Game With Noncompliant Windowing";
 	Type = "Application";
-	Icon = {
+	Icons = {
 		["16x16"] = "/MyPartiallyCompliantOS/MyIcon16x16.nfp";
 		["32x32"] = "/MyPartiallyCompliantOS/MyIcon32x32.nfp";
 	};
