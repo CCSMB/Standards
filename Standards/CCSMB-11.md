@@ -42,6 +42,7 @@ Compliant application specifications MAY define the following additional fields:
 | Field  | Type                              | Description                                    |
 |--------|-----------------------------------|------------------------------------------------|
 | Type   | str (either "Vector" or "Bitmap") | The type of the icon, either bitmap or vector. |
+| Format | str (e.g. "BIMG" or "NFP")        | The format of the icon.                        |
 | Width  | number                            | The width of the icon, in pixels.              |
 | Height | number                            | The height of the icon, in pixels.             |
 | Path   | str                               | The full path to the image file.               |
