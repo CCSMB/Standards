@@ -46,7 +46,9 @@ Compliant graphical OSes and desktop managers SHOULD set this variable to `nil` 
 
 ## Module
 
-Compliant graphical OSes and desktop managers MAY define the `ccsmb_desktop` module, but it MUST contain the `ccsmb_desktop.run` function. The function MUST open a new window. The function MUST accept arguments in the same way that `shell.run` does:
+Compliant graphical OSes and desktop managers MAY define the `ccsmb_desktop` module. The module MAY be loaded through `require`; it MAY also be defined in the `ccsmb_desktop` global, but this is strongly discouraged.
+
+The `ccsmb_desktop` module MUST contain the `ccsmb_desktop.run` function. The function MUST open a new window. The function MUST accept arguments in the same way that `shell.run` does:
 > All arguments are concatenated together and then parsed as a command line. As a result, shell.run("program a b") is the same as shell.run("program", "a", "b").
 > — [CC: Tweaked documentation](https://tweaked.cc/module/shell.html#v:run)
 
