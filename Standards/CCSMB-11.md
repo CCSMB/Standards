@@ -28,9 +28,9 @@ Central to the specification are "application specifications". Each application 
 
 Compliant application specifications MAY define the following additional fields:
 
-| Field       | Type                                      | Description                                                                                                                                                                                                             |
+| Field       | Type                                      | Description                                                                                                                                                                                                            |
 |-------------|-------------------------------------------|-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------|
-| Icons       | number-indexed array of array with fields | An array representing a set of icons for an application. Please see the below section for the format of this array.                                                                                                     |
+| Icons       | number-indexed array of array with fields | An array representing a set of icons for an application. Compliant application specifications SHOULD have at least one square image (where width and height are identical). Please see the below section for the format of this array.                                                                                                     |
 | GenericName | str                                       | The "generic name" of the application. For example, for a file browser, this should be "File Browser".                                                                                                                  |
 | Categories  | number-indexed array of str               | Categories in which the application should be shown in application launchers. For a list of valid values, see the [FreeDesktop Desktop Menu specification](https://www.freedesktop.org/wiki/Specifications/menu-spec/). |
 | Keywords    | number-indexed array of str               | Keywords which, when combined with Name and GenericName, are useful for searching valid applications.                                                                                                                   |
@@ -42,8 +42,8 @@ Compliant application specifications MAY define the following additional fields:
 | Field  | Type                              | Description                                    |
 |--------|-----------------------------------|------------------------------------------------|
 | Type   | str (either "Vector" or "Bitmap") | The type of the icon, either bitmap or vector. |
-| Width  | number (must be same as Height)   | The width of the icon, in pixels.              |
-| Height | number (must be same as Width)    | The height of the icon, in pixels.             |
+| Width  | number                            | The width of the icon, in pixels.              |
+| Height | number                            | The height of the icon, in pixels.             |
 | Path   | str                               | The full path to the image file.               |
 
 ## Global variables

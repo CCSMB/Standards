@@ -2,8 +2,9 @@ return {
 	Name = "My Game With Noncompliant Windowing";
 	Type = "Application";
 	Icons = {
-		["16x16"] = "/MyPartiallyCompliantOS/MyIcon16x16.nfp";
-		["32x32"] = "/MyPartiallyCompliantOS/MyIcon32x32.nfp";
+		{ Type = "Bitmap"; Width = 16; Height = 16; Path = "/MyPartiallyCompliantOS/MyIcon16x16" };
+		{ Type = "Bitmap"; Width = 32; Height = 32; Path = "/MyPartiallyCompliantOS/MyIcon32x32" };
+		{ Type = "Bitmap"; Width = 60; Height = 32; Path = "/MyPartiallyCompliantOS/MyWordmark" };
 	};
 	Exec = "/MyPartiallyCompliantOS/myfungame";
 	Terminal = false;
