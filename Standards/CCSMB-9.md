@@ -16,11 +16,11 @@ Programs implementing an autoupdater MUST implement all options listed below in 
 ### `settings` API setting
 Compliant programs MUST allow disabling autoupdating through the `ccsmb.autoupdate.enable` setting. If the option is set to `false`, autoupdating MUST be disabled. If the option is unset, compliant programs MAY choose to enable or disable autoupdating for itself.
 
-Programs running on operating systems which remove the `settings` API MAY be considered compliant if they choose not to implement the `autoupdating.disableAutoupdating` setting. Such operating systems MAY implement equivalent functionality through other means appropriate for that system.
+Programs running on operating systems which remove the `settings` API MAY be considered compliant if they choose not to implement the `ccsmb.autoupdate.enable` setting. Such operating systems MAY implement equivalent functionality through other means appropriate for that system.
 
 ### Global variable
 
-Compliant programs MUST allow disabling autoupdating through the `CCSMB_DISABLE_AUTOUPDATING` global variable. If the global is set to `true`, autoupdating MUST be disabled. If the variable is unset, compliant programs MAY choose to enable or disable autoupdating for itself.
+Compliant programs MUST allow disabling autoupdating through the `CCSMB_ENABLE_AUTOUPDATING` global variable. If the global is set to `false`, autoupdating MUST be disabled. If the variable is unset, compliant programs MAY choose to enable or disable autoupdating for itself.
 
 ## Dependency installation specification
 Programs implementing autoinstallation of dependencies MAY support the following options for disabling that function.
@@ -32,8 +32,8 @@ Programs implementing autoinstallation of dependencies MUST implement all option
 ### `settings` API setting
 Compliant programs MUST allow disabling dependency installation through the `ccsmb.dependencyInstallation.enable` setting. If the option is set to `true`, autoinstallation of dependencies MUST be disabled. If the option is unset, compliant programs MAY choose to enable or disable dependency installation for itself.
 
-Programs running on operating systems which remove the `settings` API MAY be considered compliant if they choose not to implement the `autoupdating.disableAutoupdating` setting. Such operating systems MAY implement equivalent functionality through other means appropriate for that system.
+Programs running on operating systems which remove the `settings` API MAY be considered compliant if they choose not to implement the `ccsmb.dependencyInstallation.enable` setting. Such operating systems MAY implement equivalent functionality through other means appropriate for that system.
 
 ### Global variable
 
-Compliant programs MUST allow disabling autoinstallation of dependencies through the `CCSMB_DISABLE_DEPENDENCY_INSTALLATION` global variable. If the global is set to `true`, autoupdating MUST be disabled. If the option is unset, compliant programs MAY choose to enable or disable dependency installation for itself.
+Compliant programs MUST allow disabling autoinstallation of dependencies through the `CCSMB_ENABLE_DEPENDENCY_INSTALLATION` global variable. If the global is set to `false`, autoupdating MUST be disabled. If the option is unset, compliant programs MAY choose to enable or disable dependency installation for itself.
