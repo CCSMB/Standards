@@ -17,7 +17,40 @@ This specification aims to provide a standardized image format that can be easil
 The examples shown throughout this specification are based on a sample image file, serialized using `textutils.serialize`.
 
 An image file MUST be separated into two sections: metadata data and frame data. The bimg parsers MUST be able to parse these two sections even if they are switched around. Meaning that they can be correctly written and read by parsers regardless of whether the metadata or the frame data comes first:
-![Format overview](media/CCSMB-3/file-structure.png?raw=true)
+```lua
+   {
+    -- frame data --
+        {
+            {
+                "First Line",
+                "0000000000",
+                "ffffffffff",
+            },
+            {
+                "Bimg Image",
+                "dddd0aaaaa",
+                "ffffffffff",
+            },
+        },
+    -- end of frame data --
+
+    -- metadata --
+        version = "1.0.0",
+        animation = false,
+        palette = {
+            [colors.white] = {0xffffff},
+            [colors.purple] = {0xb266e5},
+            [colors.green] = {0x57a64e},
+            [colors.black] = {0x000000},
+        },
+        title = "Example",
+        description = "This is an example of the .bimg format, a universal ComputerCraft image.",
+        author = "SkyTheCodeMaster",
+        creator = "Keyboard and Mouse",
+        date = "2022-05-30T22:32:24+0000",
+    -- end of metadata --
+   }
+```
 
 Metadata contains information about the image itself, while the remaining of the file MUST contain one or more frames, representing the images.
 
@@ -52,7 +85,32 @@ Additionally, a frame MAY contain per-frame palette can be provided to alter the
 
 When the image is an animation, a `duration` field MAY also be provided. This field WILL override the `secondsPerFrame` field set in the metadata, and therefore sets a specific duration (in seconds) for that frame only.
 
-![Frame Data](media/CCSMB-3/frame-structure.png)
+```lua
+{
+  -- frame optional data --
+  duration = 0.6,
+  palette = {
+    [colors.red] = { 0xff0000 },
+  },
+  -- end of frame optional data --
+
+  -- line 1 --
+  {
+    "First Line",
+    "0000000000",
+    "ffffffffff",
+  },
+  -- end of line 1 --
+
+  -- line 2 --
+  {
+    "Bimg Image",
+    "dddd0aaaaa",
+    "ffffffffff",
+  },
+  -- end of line 2 --
+},
+```
 
 Each line MUST be composed of three `string` values forming a blit table, that MUST be able to be unpacked directly to `term.blit` when rendering the image.
 
