@@ -68,7 +68,7 @@ Spaces in any of the blit strings should make the corresponding color of the pix
 | Transparent | Transparent | The pixel is not rendered.
 
 ## Animations
-bimg can support multiple frames per image file. Each frame is numerically indexed at the root of the table, along the metadata. This allows easy retrieval with `ipairs`.
+bimg renderers can support multiple frames per image file. Each frame is numerically indexed at the root of the table, along the metadata. This allows easy retrieval with `ipairs`.
 
 In the event multiple frames are provided, the image is considered as an animation. Consequently, the `animated` boolean must be set to `true`, and the `secondsPerFrame` field should be set. If it is not present, the default value is set to `0.05` seconds.
 
