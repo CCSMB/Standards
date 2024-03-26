@@ -13,7 +13,8 @@ The key words "MUST", "MUST NOT", "REQUIRED", "SHALL", "SHALL NOT", "SHOULD", "S
 bimg (abbreviation of "blit image") is a versatile image format for the ComputerCraft Minecraft mod.
 This specification aims to provide a standardized image format that can be easily implemented and used throughout the entire ComputerCraft ecosystem.
 
-# File Structure
+## File Structure
+
 The examples shown throughout this specification are based on a sample image file, serialized using `textutils.serialize`.
 
 An image file MUST be separated into two sections: metadata data and frame data. The bimg parsers MUST be able to parse these two sections even if they are switched around. Meaning that they can be correctly written and read by parsers regardless of whether the metadata or the frame data comes first:
@@ -56,7 +57,9 @@ Metadata contains information about the image itself, while the remaining of the
 
 For more information on metadata, see [Metadata](#metadata). For more information on the image data and frames, see [Image Data](#image-data)
 .
-# Metadata
+
+## Metadata
+
 bimg stores the following metadata along the image data in the file.
 
 | Field | Type | Description |
@@ -75,11 +78,13 @@ bimg stores the following metadata along the image data in the file.
 
 Renderers SHOULD support all metadata fields, and MUST support the `version` and `animated` fields.
 
-# Image Data
+## Image Data
+
 Aside the metadata are stored the frames of the image. At least one frame MUST be present for the file to be considered valid.
 For animation support, see [Animations](#animations).
 
-## Frame Structure
+### Frame Structure
+
 A single frame MUST be composed of multiple numerically-indexed tables, each representing a single line of the image.
 Additionally, a frame MAY contain per-frame palette can be provided to alter the colors of that frame only. For more information on palettes, see [Palettes](#palettes).
 
@@ -122,12 +127,14 @@ Spaces in any of the blit strings SHOULD make the corresponding color of the pix
 | Transparent | Colored | The background color of the pixel that is about to be replaced is used as the new foreground color. |
 | Transparent | Transparent | The pixel is not rendered.
 
-## Animations
+### Animations
+
 bimg renderers CAN support multiple frames per image file. Each frame is numerically indexed at the root of the table, along the metadata. This allows easy retrieval with `ipairs`.
 
 In the event multiple frames are provided, the image is considered as an animation. Consequently, the `animated` boolean MUST be set to `true`, and the `secondsPerFrame` field SHOULD be set. If it is not present, the default value MUST be set to `0.05` seconds.
 
-# Palettes
+## Palettes
+
 Palettes allows the modification of the existing 16 ComputerCraft colors available in the `colors` API to custom RGB values, applied to the whole terminal at once.
 bimg allows the use of such palettes to render images more realistically, allowing for image effects (like dithering) to be applied.
 
