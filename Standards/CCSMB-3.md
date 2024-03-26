@@ -2,7 +2,7 @@
 
 *Author: SkyTheCodeMaster*
 
-*Contributors: MasonGulu, spr2-dev*
+*Contributors: MasonGulu, spr2-dev, EmmaKnijn*
 
 *Version: 1.0.0*
 
